@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
+import {WeatherService} from '../services/weather.service';
 
 @Component({
   selector: 'app-home-page',
@@ -9,12 +10,15 @@ import {FormControl, FormGroup, Validators} from '@angular/forms';
 export class HomePageComponent implements OnInit {
   public form: FormGroup;
 
+  constructor(private weatherService: WeatherService) {
+  }
+
   ngOnInit() {
     this.form = this.getForm();
   }
 
   public onDetectLocation(): void {
-    // Service
+    this.weatherService.detectLocation();
   }
 
   public onSubmit(): void {
@@ -22,7 +26,9 @@ export class HomePageComponent implements OnInit {
       return;
     }
 
-    // Service
+    this.weatherService.getWeatherInfoByCityName(
+        this.form.controls.city.value
+    );
   }
 
   public isInvalid = () =>
