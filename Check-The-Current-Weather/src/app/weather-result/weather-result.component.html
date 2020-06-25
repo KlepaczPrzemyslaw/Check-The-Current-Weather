@@ -1,0 +1,20 @@
+<section class="result-page">
+  <h1 class="result-page__header">{{ "RESULT.Results" | translate}} {{weatherService?.weatherInfo?.cityName}}
+    ({{weatherService?.weatherInfo?.cityShortcut}})</h1>
+  <p class="u_t-center">{{ "RESULT.Temp" | translate}}: {{weatherService?.getTemperatureInCelsius()}}°C</p>
+  <p class="u_t-center">{{ "RESULT.Cloudiness" | translate}}: {{weatherService?.weatherInfo?.cloudiness}}</p>
+  <p class="u_t-center">{{ "RESULT.LocalTime" | translate}}: {{convertTicksToDate(weatherService?.weatherInfo?.date)}}</p>
+  <p class="u_t-center">{{ "RESULT.WindSpeed" | translate}}: {{weatherService?.weatherInfo?.windSpeed}} m/s</p>
+  <p class="u_t-center">{{ "RESULT.Pressure" | translate}}: {{weatherService?.weatherInfo?.pressure}} hpa</p>
+  <p class="u_t-center">{{ "RESULT.Humidity" | translate}}: {{weatherService?.weatherInfo?.humidity}} %</p>
+  <p class="u_t-center">{{ "RESULT.Sunrise" | translate}}: {{convertTicksToDate(weatherService?.weatherInfo?.sunrise)}}</p>
+  <p class="u_t-center">{{ "RESULT.Sunset" | translate}}: {{convertTicksToDate(weatherService?.weatherInfo?.sunset)}}</p>
+  <p class="u_t-center">{{ "RESULT.Coords" | translate}}: [{{weatherService?.weatherInfo?.latitude}}
+    / {{weatherService?.weatherInfo?.longitude}}]</p>
+
+  <button
+    (click)="returnToHomePage()"
+    class="button button--primary result-page__button">
+    {{"RESULT.Back" | translate}}
+  </button>
+</section>

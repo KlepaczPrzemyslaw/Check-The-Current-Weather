@@ -1,0 +1,23 @@
+@import "../abstracts/variables";
+
+.input {
+  border: .3rem solid #ccc;
+  box-shadow: inset 0 1px 3px #ddd;
+  border-radius: 4rem;
+  padding: 1rem 3rem;
+
+  &:focus {
+    outline: none;
+    border-bottom: .3rem solid $color-primary;
+  }
+
+  &--error {
+    border-bottom: .3rem solid $color-error;
+  }
+
+  &__error-text {
+    text-align: center;
+    color: $color-error;
+    font-size: 1.3rem;
+  }
+}

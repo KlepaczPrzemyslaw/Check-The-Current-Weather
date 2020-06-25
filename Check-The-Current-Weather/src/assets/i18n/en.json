@@ -1,0 +1,23 @@
+{
+  "HOME": {
+    "Title": "Check The Current Weather",
+    "CurrentLocation": "Detect My City",
+    "OrEnterTheCity": "Or enter the city manually",
+    "City": "Your City (eg. London)",
+    "CityFieldError": "Minimum two characters",
+    "SubmitCity": "Submit"
+  },
+  "RESULT": {
+    "Results": "Weather in:",
+    "Temp": "Temperature",
+    "Cloudiness": "Cloudiness",
+    "LocalTime": "Date",
+    "WindSpeed": "Wind speed",
+    "Pressure": "Pressure",
+    "Humidity": "Humidity",
+    "Sunrise": "Sunrise",
+    "Sunset": "Sunset",
+    "Coords": "Your coordinates",
+    "Back": "Return"
+  }
+}
