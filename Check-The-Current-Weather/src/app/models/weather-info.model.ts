@@ -4,12 +4,12 @@ export class WeatherInfoModel {
     public cityShortcut: string,
     public temperature: number,
     public cloudiness: string,
-    public date: Date,
+    public date: number,
     public windSpeed: string,
     public pressure: string,
     public humidity: string,
-    public sunrise: Date,
-    public sunset: Date,
+    public sunrise: number,
+    public sunset: number,
     public latitude: number,
     public longitude: number
   ) {

@@ -5,6 +5,8 @@ import {map} from 'rxjs/operators';
 import {Observable} from 'rxjs';
 import {Router} from '@angular/router';
 
+const KelvinBase = 273.15;
+
 @Injectable({
   providedIn: 'root'
 })
@@ -31,6 +33,14 @@ export class WeatherService {
 
   public clearInfo(): void {
     this.weatherInfo = null;
+  }
+
+  public getTemperatureInCelsius(): string {
+    if (this.weatherInfo) {
+      return (this.weatherInfo.temperature - KelvinBase).toFixed(2);
+    }
+
+    return null;
   }
 
   private getWeatherInfoByCoords(latitude: number, longitude: number): void {
