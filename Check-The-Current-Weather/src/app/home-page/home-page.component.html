@@ -1,1 +1,26 @@
-<p>home-page works!</p>
+<section class="home-page">
+  <h1 class="home-page__header">{{ "HOME.Title" | translate | uppercase }}</h1>
+  <button
+    (click)="onDetectLocation()"
+    class="button button--primary home-page__current-city">
+    {{ "HOME.CurrentLocation" | translate }}
+  </button>
+  <p>{{ "HOME.OrEnterTheCity" | translate }}</p>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <input
+      placeholder="{{ 'HOME.City' | translate }}"
+      type="text"
+      [class]="'input ' + (isInvalid() ? 'input--error' : '')"
+      formControlName="city">
+    <p *ngIf="isInvalid()"
+       class="input__error-text">
+      {{ 'HOME.CityFieldError' | translate }}
+    </p>
+  </form>
+  <button
+    type="submit"
+    [class]="'home-page__submit-button button ' + (form.invalid ? '' : 'button--primary')"
+    [disabled]="form.invalid">
+    {{ "HOME.SubmitCity" | translate }}
+  </button>
+</section>

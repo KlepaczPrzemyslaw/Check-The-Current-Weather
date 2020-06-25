@@ -1,0 +1,26 @@
+@import "../abstracts/variables";
+
+.home-page {
+  min-width: 100vw;
+  min-height: 100vh;
+
+  background-color: $background-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  &__header {
+    font-size: 4rem;
+    color: $color-material-font;
+    margin-bottom: 4rem;
+  }
+
+  &__current-city {
+    margin-bottom: 4rem;
+  }
+
+  &__submit-button {
+    margin-top: 1rem;
+  }
+}
