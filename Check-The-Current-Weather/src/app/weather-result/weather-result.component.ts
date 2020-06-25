@@ -16,10 +16,10 @@ export class WeatherResultComponent {
     }
   }
 
-  public return(): void {
+  public returnToHomePage(): void {
     this.weatherService.clearInfo();
     this.router.navigate(['/']);
   }
 
-  public getDate = (ticks: number): string => new Date(ticks * 1000).toString();
+  public convertTicksToDate = (ticks: number): string => new Date(ticks * 1000).toString();
 }
