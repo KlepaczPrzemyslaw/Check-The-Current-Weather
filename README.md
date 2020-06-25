@@ -5,3 +5,6 @@
 - Open: terminal
 - Write command: npm install
 - Write command: ng serve
+
+## Website:
+- https://check-the-current-weather.firebaseapp.com/
