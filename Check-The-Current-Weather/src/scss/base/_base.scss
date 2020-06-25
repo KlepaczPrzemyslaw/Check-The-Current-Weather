@@ -1,0 +1,41 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -moz-box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+
+  @include respond(t-land) {
+    font-size: 56.25%;
+  }
+  @include respond(t-port) {
+    font-size: 50%;
+  }
+  @include respond(phone) {
+    font-size: 43.75%;
+  }
+
+  @include respond(desktop) {
+    font-size: 68.75%;
+  }
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: $color-material-font;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
