@@ -8,6 +8,16 @@
     "SubmitCity": "Submit"
   },
   "RESULT": {
-    "Results": "Results for:"
+    "Results": "Weather in:",
+    "Temp": "Temperature",
+    "Cloudiness": "Cloudiness",
+    "LocalTime": "Date",
+    "WindSpeed": "Wind speed",
+    "Pressure": "Pressure",
+    "Humidity": "Humidity",
+    "Sunrise": "Sunrise",
+    "Sunset": "Sunset",
+    "Coords": "Your coordinates",
+    "Back": "Return"
   }
 }
